@@ -26,13 +26,14 @@ document.addEventListener("DOMContentLoaded", function(){
             isValid= false;
             messages.push("Password must be at least 8 characters long.")
         }
-        if (!isValid){
-            feedbackDiv.style.display ="block";
-            feedbackDiv.textContent = messages.join("<br>");
-            feedbackDiv.style.color = "#dc3545"
-        }else {
-            feedbackDiv.style.display = "block";
+        feedbackDiv.style.display ="block";
+        if (isValid){  
             feedbackDiv.textContent = "Registration successful!";
-            feedbackDiv.style.color = "#28a745";
+             feedbackDiv.style.color = "#28a745";
+        }else {
+             feedbackDiv.textContent = messages.join("<br>");
+              feedbackDiv.style.color = "#dc3545"
+              feedbackDiv.innerHTML = messages.join("<br>");
         }
+
 })
