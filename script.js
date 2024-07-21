@@ -11,22 +11,22 @@ document.addEventListener("DOMContentLoaded", function(){
         const email = document.getElementById("email"). value.trim()
         const password = document.getElementById("assword").value.trim()
 
-        let isVaild = true;
+        const isValid = true;
         let messages = []
 
         if(username.length < 3){
-            isVaild = false; 
+            isValid = false; 
             messages.push("Username must be at least 3 characters long.")
         } 
         if ( !email.includes("@") || ! email.includes(".")){
-            isVaild = false
+            isValid = false
             messages.push("Email must contain both '@' and '.' characters.")
         }
         if (password.length < 8){
-            isVaild= false;
+            isValid= false;
             messages.push("Password must be at least 8 characters long.")
         }
-        if (!isVaild){
+        if (!isValid){
             feedbackDiv.style.display ="block";
             feedbackDiv.textContent = messages.join("<br>");
             feedbackDiv.style.color = "#dc3545"
