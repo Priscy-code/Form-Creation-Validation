@@ -18,14 +18,14 @@ document.addEventListener("DOMContentLoaded", function(){
             messages.push("incorrect")
         } 
         if ( !email.includes("@") || ! email.includes(".")){
-            isVaidl = false
+            isVaid = false
             messages.push("Incorrect email")
         }
         if (password.length < 8){
             isVaild= false;
             messages.push("incorrect Password")
         }
-        if (!isVail){
+        if (!isVaild){
             feedbackDiv.style.display ="block";
             feedbackDiv.textContent = messages.join("<br>");
             feedbackDiv.style.color = "#dc3545"
