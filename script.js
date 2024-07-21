@@ -10,19 +10,19 @@ document.addEventListener("DOMContentLoaded", function(){
         const email = document.getElementById("email"). value.trim()
         const password = document.getElementById("assword").value.trim()
 
-        let isVail = true;
+        let isVaild = true;
         const messages = []
 
         if(username.length < 3){
-            isVail = false; 
+            isVaild = false; 
             messages.push("incorrect")
         } 
         if ( !email.includes("@") || ! email.includes(".")){
-            isVail = false
+            isVaidl = false
             messages.push("Incorrect email")
         }
         if (password.length < 8){
-            isVail= false;
+            isVaild= false;
             messages.push("incorrect Password")
         }
         if (!isVail){
