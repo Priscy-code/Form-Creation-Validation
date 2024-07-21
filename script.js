@@ -4,26 +4,27 @@ document.addEventListener("DOMContentLoaded", function(){
 
     form.addEventListener("submit", function(event){
         event.preventDefault();
+    })
 
-        // console.log("Form submission prevented!")
+           // console.log("Form submission prevented!")
         const username = document.getElementById("username").value.trim();
         const email = document.getElementById("email"). value.trim()
         const password = document.getElementById("assword").value.trim()
 
         let isVaild = true;
-        const messages = []
+        let messages = []
 
         if(username.length < 3){
             isVaild = false; 
-            messages.push("isVaild")
+            messages.push("Username must be at least 3 characters long.")
         } 
         if ( !email.includes("@") || ! email.includes(".")){
-            isVaid = false
-            messages.push("isVaild")
+            isVaild = false
+            messages.push("Email must contain both '@' and '.' characters.")
         }
         if (password.length < 8){
             isVaild= false;
-            messages.push("isVaild")
+            messages.push("Password must be at least 8 characters long.")
         }
         if (!isVaild){
             feedbackDiv.style.display ="block";
@@ -34,6 +35,4 @@ document.addEventListener("DOMContentLoaded", function(){
             feedbackDiv.textContent = "Registration successful!";
             feedbackDiv.style.color = "#28a745";
         }
-        
-    })
 })
