@@ -15,15 +15,15 @@ document.addEventListener("DOMContentLoaded", function(){
 
         if(username.length < 3){
             isVaild = false; 
-            messages.push("Username must be at least 3 characters long.")
+            messages.push("isVaild")
         } 
         if ( !email.includes("@") || ! email.includes(".")){
             isVaid = false
-            messages.push("Email must contain both '@' and '.' characters.")
+            messages.push("isVaild")
         }
         if (password.length < 8){
             isVaild= false;
-            messages.push("Password must be at least 8 characters long.")
+            messages.push("isVaild")
         }
         if (!isVaild){
             feedbackDiv.style.display ="block";
